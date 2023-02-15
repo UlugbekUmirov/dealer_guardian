@@ -44,9 +44,9 @@ export default function Results() {
                     <th>Purchase power</th>
                   </tr>
                   {results && results.length !== 0
-                    ? results.map(({ credit_bureau,term_max,term_min , rate ,advance}) => (
+                    ? results.map(({ credit_bureau,term_max,term_min , rate ,advance , bank}) => (
                         <tr>
-                          <td>{credit_bureau?.name}</td>
+                          <td>{bank?.name}</td>
                           <td>{rate}%</td>
                           <td>{term_max} - {term_min}</td>
                           <td>{Number(advance)*100}% of Retail value</td>

@@ -1,25 +1,33 @@
-@import url("https://fonts.cdnfonts.com/css/circular-std?styles=17909,17911");
+
 @font-face {
   font-display: swap;
-  font-family: "Circular Std", sans-serif;
+  font-family: "Circular-Std";
   font-style: normal;
   font-weight: 500;
-  src: url("./Fonts/FontsFree-Net-CircularStd-Black.ttf");
+  src: url("./fonts/circular-std-medium-500\ \(1\).ttf") ;
 }
 @font-face {
   font-display: swap;
-  font-family: "Circular Std", sans-serif;
+  font-family: "Circular-Std";
   font-style: normal;
   font-weight: 450;
-  src: url("./Fonts/FontsFree-Net-Circular-Std-Book-2.ttf");
+  src: url("./fonts/FontsFree-Net-Circular-Std-Book-2.ttf") ;
 }
+/* @font-face {
+  font-display: swap;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  src: url("./fonts/FontsFree-Net-Circular-Std-Book-2.ttf") ;
+} */
 body {
   margin: 0;
-  font-family: "Circular Std", sans-serif;
+  /* font-family: "Circular Std", sans-serif; */
+  font-family: "Circular-Std";
 }
 
 code {
-  font-family: "Circular Std", sans-serif;
+  font-family: "Circular-Std";
 }
 table {
   font-family: arial, sans-serif;
@@ -33,10 +41,12 @@ th {
   padding: 15px;
   background-color: #f8f8f8;
   max-height: 54px;
+  font-family: "Circular-Std";
 }
 
 tr:nth-child(even) {
   background-color: #f8f8f8;
+  font-family: "Circular-Std";
 }
 tr:nth-child(1) > th {
   border-top: 3px solid #4447e7 !important;
@@ -51,4 +61,15 @@ tr:nth-child(2) > th {
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+}
+.small-input {
+  -moz-appearance: textfield;
+}
+.small-input::-webkit-inner-spin-button {
+  display: none;
+}
+.small-input::-webkit-outer-spin-button,
+.small-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -49,19 +49,23 @@ export const Container = styled.div`
           width: 100%;
         }
         @media (max-width: 500px) {
-          margin-left: 27%;
+          margin-left: 24%;
           width: 100%;
         }
         @media (max-width: 450px) {
-          margin-left: 22%;
+          margin-left: 19%;
           width: 100%;
         }
         @media (max-width: 380px) {
-          margin-left: 20%;
+          margin-left: 17%;
           width: 100%;
         }
+       /*  @media (max-width: 370px) {
+          margin-left: 16.5%;
+          width: 100%;
+        } */
         @media (max-width: 360px) {
-          margin-left: 17%;
+          margin-left: 15%;
           width: 100%;
         }
         @media (max-width: 340px) {
@@ -119,6 +123,7 @@ export const Container = styled.div`
         text-align: center;
         @media (max-width: 700px) {
           margin-left: 32%;
+          margin-bottom: 100px;
         }
         @media (max-width: 550px) {
           margin-left: 30%;
@@ -127,18 +132,19 @@ export const Container = styled.div`
           margin-left: 27%;
         }
         @media (max-width: 450px) {
-          margin-left: 22%;
+          margin-left: 21%;
         }
         @media (max-width: 380px) {
-          margin-left: 20%;
+          margin-left: 18%;
         }
         @media (max-width: 360px) {
-          margin-left: 17%;
+          margin-left: 16%;
         }
         @media (max-width: 340px) {
-          margin-left: 15%;
+          margin-left: 14%;
         }
         & .get_button_p {
+          font-family: "Circular-Std";
           font-weight: 500;
           font-size: 18px;
           line-height: 23px;
@@ -146,7 +152,9 @@ export const Container = styled.div`
           margin: 0;
           opacity: 1;
           margin-right: 10px;
+         
         }
+
         & span :hover {
           & ::after {
             transition: all 0.3s ease;
@@ -164,6 +172,7 @@ export const Container = styled.div`
         background: #4447e7;
         border-radius: 10px;
         font-weight: 500;
+        font-family: "Circular-Std";
         font-size: 18px;
         line-height: 23px;
         letter-spacing: 1px;
@@ -190,10 +199,11 @@ export const Container = styled.div`
             background: #4447e7;
             text-align: center;
             align-items: center;
-            padding: 10px 15px;
+            padding: 10px 16px;
             border-radius: 50%;
-            color: white;
+            color: white; 
           }
+         
           & img {
             margin-right: 24px;
             margin-left: 24px;
@@ -322,12 +332,13 @@ export const Container = styled.div`
                 outline: none;
               }
               .errs {
-                font-weight: 400;
                 font-size: 12px;
                 line-height: 14px;
                 width: 100%;
                 margin-top: 0px;
                 margin-bottom: 0px;
+                font-size: 450;
+                font-family: "Circular-Std";
                 color: red;
                 & > div {
                   margin: 8px;
@@ -346,8 +357,8 @@ export const Container = styled.div`
                 width: 100%;
               }
             }
-            @media (max-width:450px) {
-              display: block;
+            @media (max-width: 450px) {
+              // display: block;
               width: 100%;
             }
           }
@@ -363,6 +374,7 @@ export const Container = styled.div`
           border-radius: 10px;
           border: none;
           font-weight: 500;
+          font-family: "Circular-Std";
           font-size: 16px;
           line-height: 20px;
           letter-spacing: 1px;

@@ -5,9 +5,7 @@ export const UiTable = styled.div`
 
   display: block;
  
-  overflow: auto;
   & table{
-
    overflow: auto;
   }
  

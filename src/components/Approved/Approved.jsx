@@ -62,6 +62,10 @@ export default function Approved() {
       t = false;
       err = { ...err, equity: true };
     }
+    if (!obj?.term) {
+      t = false;
+      err = { ...err, term: true };
+    }
 
     const formData = new FormData();
     formData.append("fullname", obj?.fullname);
@@ -73,6 +77,7 @@ export default function Approved() {
     formData.append("caryear", obj?.caryear);
     formData.append("downpayment", obj?.downpayment);
     formData.append("equity", obj?.equity);
+    formData.append("term", obj?.term);
 
     if (t) {
       Axios()
@@ -135,7 +140,7 @@ export default function Approved() {
                   <div className="step_1-input">
                     <div className="car">
                       <img src="/images/car.svg" alt="" />
-                      <p>Auto loan</p>
+                      <p className="gg">Auto loan</p>
                     </div>
                     <img src="/images/tick-circle.svg" alt="" />
                   </div>
@@ -169,7 +174,9 @@ export default function Approved() {
                           Zip code <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="zipcode"
                           value={obj?.zipcode || ""}
                           onChange={changeInput}
@@ -183,7 +190,9 @@ export default function Approved() {
                           Monthly income <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="income"
                           value={obj?.income || ""}
                           onChange={changeInput}
@@ -199,10 +208,12 @@ export default function Approved() {
                           Equifax <span>*</span>
                         </label>
                         <input
-                          type="text"
                           name="equifax"
                           value={obj?.equifax || ""}
                           onChange={changeInput}
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                         />
                         <div className="errs">
                           {objE.equifax ? <div>Требуется</div> : ""}
@@ -213,7 +224,9 @@ export default function Approved() {
                           Experian <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="experian"
                           value={obj?.experian || ""}
                           onChange={changeInput}
@@ -229,7 +242,9 @@ export default function Approved() {
                           TransUnion <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="transunion"
                           value={obj?.transunion || ""}
                           onChange={changeInput}
@@ -252,7 +267,9 @@ export default function Approved() {
                           Vehicle year <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="caryear"
                           value={obj?.caryear || ""}
                           onChange={changeInput}
@@ -268,7 +285,9 @@ export default function Approved() {
                           Down payment <span>*</span>
                         </label>
                         <input
-                          type="text"
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
                           name="downpayment"
                           value={obj?.downpayment || ""}
                           onChange={changeInput}
@@ -291,6 +310,24 @@ export default function Approved() {
                         />
                         <div className="errs">
                           {objE.equity ? <div>Требуется</div> : ""}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="create">
+                      <div className="input_target">
+                        <label htmlFor="">
+                          Term <span>*</span>
+                        </label>
+                        <input
+                          type="number"
+                          pattern="[0-9]*"
+                          className="small-input"
+                          name="term"
+                          value={obj?.term || ""}
+                          onChange={changeInput}
+                        />
+                        <div className="errs">
+                          {objE.term ? <div>Требуется</div> : ""}
                         </div>
                       </div>
                     </div>
