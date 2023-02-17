@@ -28,6 +28,72 @@ export const Container = styled.div`
     border-radius: 24px;
 
     & .get_approved {
+      & .auto_loan_online_result_not_found {
+        max-width: 187px !important;
+        margin-left: 36%;
+        max-width: 227px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 20px;
+        border: 1px solid #ff2424;
+        border-radius: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+        text-align: center;
+        //font-family: "Circular Std", sans-serif;
+        font-family: "Circular-std";
+        @media (max-width: 700px) {
+          margin-left: 33%;
+          width: 100%;
+        }
+        @media (max-width: 650px) {
+          margin-left: 32%;
+          width: 100%;
+        }
+        @media (max-width: 550px) {
+          margin-left: 30%;
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          margin-left: 24.5%;
+          width: 100%;
+        }
+        @media (max-width: 450px) {
+          margin-left: 22%;
+          width: 100%;
+        }
+        @media (max-width: 380px) {
+          margin-left: 17%;
+          max-width: 100%;
+        }
+        /*  @media (max-width: 370px) {
+          margin-left: 16.5%;
+          width: 100%;
+        } */
+        @media (max-width: 360px) {
+          margin-left: 16%;
+          width: 100%;
+        }
+        @media (max-width: 340px) {
+          margin-left: 15%;
+          width: 100%;
+        }
+        & img {
+          margin-right: 10px;
+        }
+
+        & .span_not_found {
+          margin: 0;
+          text-transform: uppercase;
+          color: #ff2424;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
       & .auto_loan_online_result {
         max-width: 187px !important;
         margin-left: 36%;
@@ -92,11 +158,18 @@ export const Container = styled.div`
           font-size: 14px;
           line-height: 18px;
         }
+        & .span_not_found {
+          margin: 0;
+          text-transform: uppercase;
+          color: #ff2424;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
       & .auto_loan_online {
         max-width: 186px !important;
         margin-left: 34%;
-        // max-width: 227px!important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -127,14 +200,18 @@ export const Container = styled.div`
           margin-left: 19%;
           width: 100%;
         }
+        @media (max-width: 410px) {
+          margin-left: 16%;
+          width: 100%;
+        }
         @media (max-width: 380px) {
           margin-left: 17%;
           max-width: 100%;
         }
-        /*  @media (max-width: 370px) {
+        @media (max-width: 370px) {
           margin-left: 16.5%;
           width: 100%;
-        } */
+        }
         @media (max-width: 360px) {
           margin-left: 15%;
           width: 100%;
@@ -209,6 +286,10 @@ export const Container = styled.div`
           margin-left: 19%;
           width: 100%;
         }
+        @media (max-width: 410px) {
+          margin-left: 17%;
+          width: 100%;
+        }
         @media (max-width: 380px) {
           margin-left: 17%;
           max-width: 100%;
@@ -245,6 +326,25 @@ export const Container = styled.div`
             transition: all 0.3s ease;
           }
         }
+      }
+      & .get_button_ntf {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 19px 32px;
+        background: #4447e7;
+        border-radius: 10px;
+        font-weight: 500;
+        font-family: "Circular-std";
+        font-size: 18px;
+        line-height: 23px;
+
+        letter-spacing: 1px;
+        border: none;
+        color: #ffffff;
+        margin-left: 8%;
+
+        cursor: pointer;
       }
       & .get_button_result {
         text-align: center;
@@ -408,6 +508,7 @@ export const Container = styled.div`
             & .input_target {
               width: 100%;
               margin-bottom: 16px;
+              position: relative;
               & .error {
                 border: 1px solid #ff2424;
               }
@@ -415,6 +516,16 @@ export const Container = styled.div`
                 min-width: 565px;
                 min-height: 54px;
               }
+              & .dateP {
+                /*  width: 15px;
+                height: 24px; */
+                position: absolute;
+                bottom: -55px;
+                right: 3px;
+                margin: 0;
+                opacity: 0;
+              }
+
               & input,
               & select {
                 height: 54px;
@@ -440,6 +551,31 @@ export const Container = styled.div`
                 }
                 :active {
                   border: 1px solid #4447e7;
+                }
+              }
+              & .imgg {
+                & .input_d {
+                  position: absolute;
+                  width: 25px;
+                  height: 25px;
+                  right: 2px;
+                  bottom: 15px;
+                  z-index: 9999999;
+                  opacity: 0;
+                }
+                & img {
+                  position: absolute;
+                  bottom: 18px;
+                  right: 6px;
+                  margin: 0;
+                }
+              }
+              & .imggg {
+                img {
+                  position: absolute;
+                  bottom: 37px;
+                  right: 6px;
+                  margin: 0;
                 }
               }
               .errs {

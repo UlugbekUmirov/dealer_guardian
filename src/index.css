@@ -22,7 +22,7 @@
 body {
   margin: 0;
   /* font-family: "Circular Std", sans-serif; */
-  font-family: "Circular-Std";
+  font-family: "Circular-std";
 }
 
 code {
@@ -73,16 +73,66 @@ tr:nth-child(2) > th {
   margin: 0;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  background-image: url('/public/images/calendar-2.svg');
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 5px;
-  border-radius: 2px;
-  margin-right: 2rem;
-  padding: 1rem;
-  padding-right: 2rem;
+.react-datepicker {
+  border: 1px solid #4447e7 !important;
+  border-radius: 10px !important;
+  padding: 15px;
+}
+.react-datepicker__navigation--next {
+  right: 35px !important;
+  top: 15px !important;
+}
+.react-datepicker__navigation--previous {
+  left: 35px !important;
+  top: 15px !important;
+}
+.react-datepicker__year .react-datepicker__year-text {
+  width: 63px !important;
+  margin: 0 !important;
+}
+.react-datepicker__header {
+  border-bottom: none !important;
+  background-color: white !important;
+}
+.react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle::after {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle::before {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.react-datepicker__year-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px !important;
+}
+.react-datepicker__year-text {
+  padding: 10px 5px;
+  width: 63px !important;
+
+  font-family: "Circular-std";
+}
+.react-datepicker__year-text--selected {
+  background: #4447e7 !important;
+}
+.react-datepicker-year-header {
+  background: #ffffff;
+  font-family: "Circular-std";
+}
+.dateeee {
+  width: 25px !important;
+  height: 25px !important;
+  position: absolute;
+  z-index: 999;
+  bottom: 30px;
+  right: 6px;
+  margin: 0;
+  opacity: 0;
+}
+
+.react-datepicker-popper {
+  transform: translate(219px, 87px) !important;
 }

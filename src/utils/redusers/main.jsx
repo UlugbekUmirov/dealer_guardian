@@ -3,6 +3,7 @@
 const INITIAL_STATE = {
 
  results: [],
+ term:0
 };
 
 const reducers = (state = INITIAL_STATE, action) => {
@@ -14,6 +15,12 @@ const reducers = (state = INITIAL_STATE, action) => {
        results: action.payload,
      };
    }
+   case "TERM": {
+    return {
+      ...state,
+      term: action.payload,
+    };
+  }
    default:
      return state;
  }

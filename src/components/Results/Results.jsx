@@ -9,9 +9,10 @@ export default function Results() {
   const navigate = useNavigate();
 
   const { results } = useSelector((state) => state.main);
+  const { term } = useSelector((state) => state.main);
   useEffect(() => {
     if (results.length === 0) {
-      navigate("/");
+      navigate("/not-result-found");
     }
   }, []);
   return (
@@ -55,11 +56,8 @@ export default function Results() {
                           <tr>
                             <td>{bank?.name}</td>
                             <td>{rate}%</td>
-                            <td>
-                              {term_min} - {term_max}
-                            </td>
-                            <td>{Number(advance) * 100}% of Retail value</td>
-                            {console.log(advance, 9999)}
+                            <td>{term}</td>
+                            <td>{parseInt(advance * 100)}% of Retail value</td>
                           </tr>
                         )
                       )
@@ -67,7 +65,10 @@ export default function Results() {
                 </table>
               </UiTable>
             </div>
-            <button className="get_button_result" onClick={() => navigate("/")}>
+            <button
+              className="get_button_result"
+              onClick={() => navigate("/")}
+            >
               GO TO MAIN
               <span></span>
             </button>

@@ -12,7 +12,7 @@ export default function Home() {
         <div className="body">
           <div className="get_approved">
             <div className="auto_loan_online">
-              <img src="images/steering-wheel 1.svg" alt="" />
+              <img src="/images/steering-wheel 1.svg" alt="" />
               <span className="span">AUTO LOAN ONLINE</span>
             </div>
             <div className="title">

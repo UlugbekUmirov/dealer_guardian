@@ -12,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function Approved() {
   const [tab, setTab] = useState(1);
   const [obj, setObj] = useState({
-    caryear: new Date().getFullYear(),
+    caryear: "",
   });
   const [objE, setObjE] = useState({});
   const [list, setList] = useState([]);
@@ -194,7 +194,7 @@ export default function Approved() {
     formData.append("equifax", obj?.equifax);
     formData.append("experian", obj?.experian);
     formData.append("transunion", obj?.transunion);
-    formData.append("caryear", obj?.caryear?.getFullYear());
+    formData.append("caryear", obj?.year1);
     formData.append("downpayment", obj?.downpayment.replace(/,/g, ""));
     formData.append("equity", obj?.equity.replace(/,/g, ""));
     formData.append("term", obj?.term);
@@ -222,6 +222,11 @@ export default function Approved() {
             type: "RESULTS",
             payload: res?.data?.dealers,
           });
+          console.log("res", res);
+          dispatch({
+            type: "TERM",
+            payload: obj?.term,
+          });
         })
         .catch(setObjE(err))
         .finally();
@@ -232,10 +237,6 @@ export default function Approved() {
   return (
     <>
       <Container>
-        {console.log(
-          get(obj?.phone, "phone", "").replace(/-/g, "").toString().length,
-          "55"
-        )}
         <div className="img">
           <img src="images/Rectangle 1.svg" alt="" />
         </div>
@@ -348,7 +349,7 @@ export default function Approved() {
                             Monthly income <span>*</span>
                           </label>
                           {incomeE ? (
-                            <label htmlFor="">Enter a income</label>
+                            <label htmlFor="">Enter an income</label>
                           ) : (
                             ""
                           )}
@@ -447,7 +448,6 @@ export default function Approved() {
                             ""
                           )}
                         </div>
-
                         <InputMask
                           //  maxLength={"3"}
                           formatChars={{ b: "[0-9]" }}
@@ -462,8 +462,8 @@ export default function Approved() {
                             setTransunionE(false);
                           }}
                         />
-                        <div className="errs">
-                          {objE.transunion ? <div>Требуется</div> : ""}
+                        <div className="imgg">
+                          <img src="/images/image 28.svg" alt="" />
                         </div>
                       </div>
                       <div className="input_target">
@@ -535,7 +535,10 @@ export default function Approved() {
               ) : (
                 <>
                   <h4>Additional information</h4>
-                  <span>There are only 3 inputs left to get the results!</span>
+                  <span>
+                    There are only 3 inputs left to get the results!
+                  </span>{" "}
+                  <br />
                   <div className="inputs">
                     <div className="create">
                       <div className="input_target">
@@ -545,40 +548,34 @@ export default function Approved() {
                           </label>
                           {}
                         </div>
+                        <InputMask
+                          formatChars={{ b: "[0-9]" }}
+                          mask="bbbb"
+                          maskChar=""
+                          name="year1"
+                          value={obj?.year1 || ""}
+                          onChange={(e) => {
+                            changeInput(e);
+                          }}
+                        />
                         <DatePicker
                           selected={obj?.caryear}
                           onChange={(e) => {
-                            setObj({ ...obj, caryear: e });
+                            setObj({
+                              ...obj,
+                              caryear: e,
+                              year1: e.getFullYear(),
+                            });
                           }}
+                          placeholderText="Select Year"
                           showYearPicker
                           dateFormat="yyyy"
                           value={obj?.caryear || ""}
                           name="caryear"
+                          className="dateeee"
                         />
-
-                        {/* <select
-                          name="caryear"
-                          //  className={yearE ? "error" : "noterr"}
-                          value={obj?.caryear || ""}
-                          onChange={(e) => {
-                            changeInput(e);
-                            setYearE(false);
-                          }}
-                        >
-                          <option value={""} style={{ color: "#8f93a7" }}>
-                            {"Select year"}
-                          </option>
-                          {years.map((year, index) => {
-                            return (
-                              <>
-                                <option value={year}>{year}</option>
-                              </>
-                            );
-                          })}
-                        </select> */}
-
-                        <div className="errs">
-                          {objE.caryear ? <div>Требуется</div> : ""}
+                        <div className="imggg">
+                          <img src="/images/calendar-2.svg" alt="" />
                         </div>
                       </div>
                     </div>
