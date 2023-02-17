@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom/dist";
@@ -23,7 +22,7 @@ export default function Results() {
         </div>
         <div className="body">
           <div className="get_approved">
-            <div className="auto_loan_online">
+            <div className="auto_loan_online_result">
               <img src="images/tick-circle.svg" alt="" />
               <span className="span">RESULTS ARE READY</span>
             </div>
@@ -44,15 +43,26 @@ export default function Results() {
                     <th>Purchase power</th>
                   </tr>
                   {results && results.length !== 0
-                    ? results.map(({ credit_bureau,term_max,term_min , rate ,advance , bank}) => (
-                        <tr>
-                          <td>{bank?.name}</td>
-                          <td>{rate}%</td>
-                          <td>{term_max} - {term_min}</td>
-                          <td>{Number(advance)*100}% of Retail value</td>
-                          {console.log(advance, 9999)}
-                        </tr>
-                      ))
+                    ? results.map(
+                        ({
+                          credit_bureau,
+                          term_max,
+                          term_min,
+                          rate,
+                          advance,
+                          bank,
+                        }) => (
+                          <tr>
+                            <td>{bank?.name}</td>
+                            <td>{rate}%</td>
+                            <td>
+                              {term_min} - {term_max}
+                            </td>
+                            <td>{Number(advance) * 100}% of Retail value</td>
+                            {console.log(advance, 9999)}
+                          </tr>
+                        )
+                      )
                     : ""}
                 </table>
               </UiTable>

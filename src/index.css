@@ -1,17 +1,16 @@
-
 @font-face {
   font-display: swap;
   font-family: "Circular-Std";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/circular-std-medium-500\ \(1\).ttf") ;
+  src: url("./fonts/circular-std-medium-500\ \(1\).ttf");
 }
 @font-face {
   font-display: swap;
   font-family: "Circular-Std";
   font-style: normal;
   font-weight: 450;
-  src: url("./fonts/FontsFree-Net-Circular-Std-Book-2.ttf") ;
+  src: url("./fonts/FontsFree-Net-Circular-Std-Book-2.ttf");
 }
 /* @font-face {
   font-display: swap;
@@ -72,4 +71,18 @@ tr:nth-child(2) > th {
 .small-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url('/public/images/calendar-2.svg');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
 }

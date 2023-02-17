@@ -12,7 +12,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%; */
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1150px) {
     & .img img {
       display: none;
     }
@@ -28,9 +28,75 @@ export const Container = styled.div`
     border-radius: 24px;
 
     & .get_approved {
-      & .auto_loan_online {
+      & .auto_loan_online_result {
         max-width: 187px !important;
-        margin-left: 35%;
+        margin-left: 36%;
+        max-width: 227px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 20px;
+        border: 1px solid #4447e7;
+        border-radius: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+        text-align: center;
+        //font-family: "Circular Std", sans-serif;
+        font-family: "Circular-std";
+        @media (max-width: 700px) {
+          margin-left: 33%;
+          width: 100%;
+        }
+        @media (max-width: 650px) {
+          margin-left: 32%;
+          width: 100%;
+        }
+        @media (max-width: 550px) {
+          margin-left: 30%;
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          margin-left: 24.5%;
+          width: 100%;
+        }
+        @media (max-width: 450px) {
+          margin-left: 22%;
+          width: 100%;
+        }
+        @media (max-width: 380px) {
+          margin-left: 17%;
+          max-width: 100%;
+        }
+        /*  @media (max-width: 370px) {
+          margin-left: 16.5%;
+          width: 100%;
+        } */
+        @media (max-width: 360px) {
+          margin-left: 16%;
+          width: 100%;
+        }
+        @media (max-width: 340px) {
+          margin-left: 15%;
+          width: 100%;
+        }
+        & img {
+          margin-right: 10px;
+        }
+        & .span {
+          margin: 0;
+          text-transform: uppercase;
+          color: #4447e7;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      & .auto_loan_online {
+        max-width: 186px !important;
+        margin-left: 34%;
+        // max-width: 227px!important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -39,7 +105,12 @@ export const Container = styled.div`
         border-radius: 24px;
         align-items: center;
         text-align: center;
-        font-family: "Circular Std", sans-serif;
+        font-weight: 500;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: "Circular-std";
+        //font-family: "Circular Std", sans-serif;
         @media (max-width: 700px) {
           margin-left: 32%;
           width: 100%;
@@ -58,9 +129,9 @@ export const Container = styled.div`
         }
         @media (max-width: 380px) {
           margin-left: 17%;
-          width: 100%;
+          max-width: 100%;
         }
-       /*  @media (max-width: 370px) {
+        /*  @media (max-width: 370px) {
           margin-left: 16.5%;
           width: 100%;
         } */
@@ -104,7 +175,6 @@ export const Container = styled.div`
         width: 70%;
         margin-left: 16%;
         margin-bottom: 36px;
-        font-family: "Circular Std", sans-serif;
         @media (max-width: 450px) {
           font-size: 15px;
         }
@@ -115,33 +185,45 @@ export const Container = styled.div`
         display: flex;
         text-align: center;
         justify-content: center;
-        padding: 18.5px 23px;
+        padding: 18.5px 27px;
+        max-width: 227px !important;
         background: #4447e7;
         border-radius: 10px;
         cursor: pointer;
         border: none;
         text-align: center;
+
         @media (max-width: 700px) {
           margin-left: 32%;
-          margin-bottom: 100px;
+          width: 100%;
         }
         @media (max-width: 550px) {
           margin-left: 30%;
+          width: 100%;
         }
         @media (max-width: 500px) {
-          margin-left: 27%;
+          margin-left: 24%;
+          width: 100%;
         }
         @media (max-width: 450px) {
-          margin-left: 21%;
+          margin-left: 19%;
+          width: 100%;
         }
         @media (max-width: 380px) {
-          margin-left: 18%;
+          margin-left: 17%;
+          max-width: 100%;
         }
+        /*  @media (max-width: 370px) {
+          margin-left: 16.5%;
+          width: 100%;
+        } */
         @media (max-width: 360px) {
-          margin-left: 16%;
+          margin-left: 15%;
+          width: 100%;
         }
         @media (max-width: 340px) {
-          margin-left: 14%;
+          margin-left: 15%;
+          width: 100%;
         }
         & .get_button_p {
           font-family: "Circular-Std";
@@ -150,9 +232,9 @@ export const Container = styled.div`
           line-height: 23px;
           color: #ffffff;
           margin: 0;
+          font-family: "Circular-std";
           opacity: 1;
           margin-right: 10px;
-         
         }
 
         & span :hover {
@@ -172,13 +254,15 @@ export const Container = styled.div`
         background: #4447e7;
         border-radius: 10px;
         font-weight: 500;
-        font-family: "Circular-Std";
+        font-family: "Circular-std";
         font-size: 18px;
         line-height: 23px;
+
         letter-spacing: 1px;
         border: none;
         color: #ffffff;
         margin-left: 4%;
+
         cursor: pointer;
       }
     }
@@ -201,9 +285,9 @@ export const Container = styled.div`
             align-items: center;
             padding: 10px 16px;
             border-radius: 50%;
-            color: white; 
+            color: white;
           }
-         
+
           & img {
             margin-right: 24px;
             margin-left: 24px;
@@ -292,6 +376,7 @@ export const Container = styled.div`
             font-size: 16px;
           }
         }
+
         & .step_1-input {
           display: flex;
           justify-content: space-between;
@@ -316,20 +401,46 @@ export const Container = styled.div`
         }
         & .inputs {
           margin-top: 32px;
+          max-width: 545px;
           & .create {
             display: flex;
             width: 100%;
             & .input_target {
               width: 100%;
-              margin-right: 16px;
               margin-bottom: 16px;
-              & input {
+              & .error {
+                border: 1px solid #ff2424;
+              }
+              & select {
+                min-width: 565px;
+                min-height: 54px;
+              }
+              & input,
+              & select {
                 height: 54px;
                 background: #ffffff;
                 border: 1px solid #e3e3e3;
                 border-radius: 12px;
                 margin-top: 8px;
                 outline: none;
+                width: 100%;
+                font-weight: 450;
+                font-size: 16px;
+                line-height: 20px;
+                font-family: "Circular-std";
+                padding-left: 16px;
+                :hover {
+                  border: 1px solid #4447e7;
+                }
+                :focus {
+                  border: 1px solid #4447e7;
+                }
+                :filled {
+                  border: 1px solid #e3e3e3;
+                }
+                :active {
+                  border: 1px solid #4447e7;
+                }
               }
               .errs {
                 font-size: 12px;
@@ -344,22 +455,36 @@ export const Container = styled.div`
                   margin: 8px;
                 }
               }
-              & label {
-                font-weight: 450;
-                font-size: 14px;
-                line-height: 18px;
+              & .labels {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & label {
+                  font-weight: 450;
+                  font-size: 14px;
+                  line-height: 18px;
 
-                & span {
-                  color: red;
+                  & span {
+                    color: red;
+                  }
+                }
+                & label:nth-child(2) {
+                  font-weight: 450;
+                  font-size: 14px;
+                  line-height: 18px;
+                  color: #ff2424;
                 }
               }
               & input {
                 width: 100%;
               }
             }
-            @media (max-width: 450px) {
+            & .input_target:nth-child(2) {
+              margin-left: 32px;
+            }
+            @media (max-width: 600px) {
               // display: block;
-              width: 100%;
+              width: 97.5%;
             }
           }
         }
@@ -373,6 +498,7 @@ export const Container = styled.div`
           padding: 20px 30px;
           border-radius: 10px;
           border: none;
+          min-width: 145px;
           font-weight: 500;
           font-family: "Circular-Std";
           font-size: 16px;
@@ -386,12 +512,35 @@ export const Container = styled.div`
         & .previuos {
           color: #8f93a7;
           background: #f8f8f8;
+          border: 1px solid #f8f8f8;
+          :hover {
+            border: 1px solid #1518ab;
+          }
+          :focus {
+            border: 1px dashed #1518ab;
+          }
         }
         & .next {
           color: white;
           background: #4447e7;
+          // background: #E3E3E3
+          :hover {
+            background: #1518ab;
+          }
+          :focus {
+            background-color: #1518ab;
+          }
         }
+        /*  & .nextE{
+          background: #E3E3E3;
+          color: #F8F8F8;
+          cursor: no-drop;
+        } */
       }
+    }
+    @media (max-width: 1300px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   @media (max-width: 700px) {
