@@ -15,7 +15,7 @@ export default function NotResultFound() {
     <>
       <Container>
         <div className="img">
-          <img src="images/Rectangle 1.svg" alt="" />
+          <img src="images/Rectangle 1.png" alt="" />
         </div>
         <div className="body">
           <div className="get_approved">
