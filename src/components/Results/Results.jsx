@@ -52,9 +52,9 @@ export default function Results() {
                           rate,
                           advance,
                           bank,
-                        }) => (
+                        } , i) => (
                           <tr>
-                            <td>{bank?.name}</td>
+                            <td>Company {i+1}</td>
                             <td>{rate}%</td>
                             <td>{term}</td>
                             <td>{parseInt(advance * 100)}% of Retail value</td>

@@ -136,3 +136,16 @@ tr:nth-child(2) > th {
 .react-datepicker-popper {
   transform: translate(219px, 87px) !important;
 }
+
+
+@media (max-width: 600px) {
+  .react-datepicker-popper {
+    inset: 2px auto auto -217px !important;
+  }
+}
+@media (max-width: 380px) {
+  .react-datepicker-popper {
+    inset: 3px auto auto -227px !important;
+    width: 98%;
+  }
+}

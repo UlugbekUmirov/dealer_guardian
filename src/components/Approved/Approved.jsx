@@ -37,10 +37,6 @@ export default function Approved() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const phoneRegExp =
-    /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
-  const regexemail =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   const nextStep = () => {
     setTab(tab == 1 ? tab : tab - 1);
   };
@@ -663,11 +659,11 @@ export default function Approved() {
             <div className="buttons">
               {tab == 1 ? (
                 <Link to={"/"}>
-                  <button className="previuos">previuos</button>
+                  <button className="previuos">PREVIOUS</button>
                 </Link>
               ) : (
                 <button className="previuos" onClick={nextStep}>
-                  previuos
+                  PREVIOUS
                 </button>
               )}
               {tab == 1 ? (
